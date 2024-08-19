@@ -30,11 +30,11 @@ dependencies:
   flutter:
     sdk: flutter
   device_apps: ^2.2.0
-  slide_digital_clock: ^1.0.2
+  # slide_digital_clock: ^1.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
