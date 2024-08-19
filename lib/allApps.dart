@@ -14,21 +14,20 @@ class _ShowAllAppsState extends State<ShowAllApps> {
     return Scaffold(
       appBar: AppBar(
         // automaticallyImplyLeading: false,
-        foregroundColor: Colors.white,
-        backgroundColor: Colors.black,
+        foregroundColor: Colors.black,
+        backgroundColor: Colors.white,
         title: TextFormField(
           autocorrect: true,
           enableSuggestions: true,
           // style: TextStyle(color: Colors.white),
-          decoration: InputDecoration(
+          decoration: const InputDecoration(
             fillColor: Colors.white,
             filled: true,
             hoverColor: Colors.white,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(60.0)),
-              borderSide: BorderSide(color: Colors.white),
-            ),
-            hintText: "Search apps here ....",
+            // border: OutlineInputBorder(
+            //   borderSide: BorderSide(color: Colors.white),
+            // ),
+            hintText: "Search apps here",
           ),
         ),
       ),
@@ -45,7 +44,8 @@ class _ShowAllAppsState extends State<ShowAllApps> {
                     snapshot.data as List<Application>?;
 
                 return GridView.count(
-                  crossAxisCount: 3,
+                  padding: EdgeInsets.all(18),
+                  crossAxisCount: 4,
                   physics: BouncingScrollPhysics(),
                   children: List.generate(allApps!.length, (index) {
                     return GestureDetector(
@@ -58,7 +58,7 @@ class _ShowAllAppsState extends State<ShowAllApps> {
                           children: [
                             Image.memory(
                               (allApps[index] as ApplicationWithIcon).icon,
-                              width: 50,
+                              width: 45,
                             ),
                             const SizedBox(
                               height: 15,
